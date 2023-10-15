@@ -10,8 +10,6 @@ import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [
     UsersModule, 
-    MongooseModule.forRoot('mongodb+srv://sgmagic:My_Mongo_89@cluster0.gtjqwjc.mongodb.net/?retryWrites=true&w=majority',
-      {  }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
